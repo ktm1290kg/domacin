@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Separator za mleko</title>
+<meta name="description" content="Električni separator za mleko 80 litara na sat: odvaja pavlaku od mleka, brzina na dugme, 12 diskova. Plaćanje pouzećem.">
+<meta property="og:title" content="Električni separator za mleko">
+<meta property="og:description" content="80 litara mleka na sat, pavlaka i obrano mleko odvojeno. 349 € · plaćanje pouzećem.">
+<meta property="og:image" content="https://ktm1290kg.github.io/domacin/separator-mleka-80l/img/og.jpg">
+<meta name="theme-color" content="#EEF1F3">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap">
+
+<style>
+/* PRAVILA (ista kao Sirius, drugi brend)
+   Raspored: telefon prvo, jedna kolona; hero = labela · naslov · jedna rečenica · slika · cena + dugme.
+   1. Mreža 8px: sekcije 64px (telefon 48px), grupe 24px, unutar grupe 12px, dugmad 52px.
+   2. Pet veličina slova: naslov 44–84 / H2 28–36 / H3 20 / tekst 16 / sitno 13. Labela 12, velika slova, .12em.
+   3. Žuta (med) samo za: cenu, glavno dugme, brojke koraka. Sve ostalo čelik: belo, sivo, tamno.
+   4. Jedno glavno dugme po ekranu; drugo je uvek prazno (ghost). Ništa preko fotografije.
+   5. Svetla strana namerno: aparat je slikan na belom, pa slika stoji na beloj ploči bez isecanja. */
+:root{
+  color-scheme:light;
+  --bg:#EEF1F3; --panel:#FFFFFF; --ink:#12171A; --mute:#55616A; --line:#D3D9DE;
+  --honey:#FFB800; --honey-dark:#E6A600; --honey-ink:#7A5200;
+  --steel:#1B2226; --steel-text:#B9C2C8; --viber:#7360F2; --whatsapp:#128C4A; --err:#B3261E; --ok:#1F6B3A;
+  --display:'Barlow Condensed','Arial Narrow',system-ui,sans-serif; --text:'Barlow',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --s1:8px; --s2:16px; --s3:24px; --s4:32px; --s5:48px; --s6:64px; --r:12px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;-webkit-text-size-adjust:100%}
+img{max-width:100%;display:block} a{color:inherit;text-decoration:none} button{font:inherit;cursor:pointer}
+h1,h2,h3{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.01em;margin:0;text-wrap:balance}
+h1{font-size:clamp(44px,11vw,84px);line-height:.95} h2{font-size:clamp(28px,3.4vw,36px);line-height:1.05} h3{font-size:20px;line-height:1.2}
+.label{font-family:var(--display);font-weight:700;text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--honey-ink)}
+.num{font-variant-numeric:tabular-nums}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+section{padding-block:var(--s5)} @media (min-width:900px){section{padding-block:var(--s6)}}
+.sec-head{display:grid;gap:var(--s1);margin-bottom:var(--s3)} .sec-head p{margin:0;color:var(--mute);max-width:40em}
+
+/* dugmad: jedan sistem */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 var(--s3);border-radius:10px;border:2px solid var(--honey);background:var(--honey);color:var(--ink);font-family:var(--display);font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.04em;white-space:nowrap}
+.btn:hover{background:var(--honey-dark);border-color:var(--honey-dark)}
+.btn svg{width:20px;height:20px;flex:0 0 auto}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--ink)} .btn-ghost:hover{background:rgba(18,23,26,.06);border-color:var(--ink)}
+.btn-icon{width:52px;padding:0}
+:focus-visible{outline:3px solid var(--honey-ink);outline-offset:3px}
+
+/* vrh: ime + poziv */
+.top{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:.08em;text-transform:uppercase}
+.brand svg{width:26px;height:26px}
+.top .tel{display:none;font-family:var(--display);font-weight:700;font-size:20px;letter-spacing:.02em}
+.top .tel-icon{display:inline-flex;height:44px;width:44px}
+@media (min-width:700px){.top .tel{display:inline} .top .tel-icon{display:none}}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1fr;grid-template-areas:"top" "head" "visual" "buy";row-gap:var(--s2)}
+.hero .top{grid-area:top} .hero-head{grid-area:head} .hero-visual{grid-area:visual} .hero-buy{grid-area:buy}
+.hero-head{display:grid;gap:var(--s2)}
+.lead{font-size:16px;color:var(--mute);max-width:34em;margin:0}
+.hero-visual{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:var(--s2);display:grid;place-items:center}
+.hero-visual img{width:min(100%,420px);height:auto}
+.frames.plain li{grid-template-columns:28px 1fr} .frames.plain svg{width:24px;height:24px;color:var(--ink)}
+.hero-buy{display:grid;gap:var(--s2);padding-bottom:var(--s4)}
+.price{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.price .rsd{font-family:var(--display);font-weight:700;font-size:40px;line-height:1;color:var(--ink);background:var(--honey);padding:8px 14px 6px;border-radius:8px}
+.price .eur{font-family:var(--display);font-weight:600;font-size:18px;color:var(--mute)}
+.cta{display:grid;grid-template-columns:1fr;gap:var(--s1)} .cta .btn{width:100%}
+.fine{font-size:13px;color:var(--mute);margin:0}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:1.1fr .9fr;grid-template-areas:"top top" "head visual" "buy visual";column-gap:var(--s5);row-gap:0}
+  .hero-head{padding-top:var(--s4);align-self:end} .hero-buy{padding:var(--s3) 0 var(--s6);align-self:start}
+  .hero-visual{margin-bottom:var(--s6)} .hero-visual img{width:min(100%,520px)}
+  .price .rsd{font-size:48px} .cta{grid-template-columns:auto auto;justify-content:start} .cta .btn{width:auto;min-width:220px}
+}
+
+/* traka poverenja */
+.trust{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+.trust ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr}
+.trust li{display:flex;align-items:center;gap:10px;padding:var(--s2) 12px;font-size:13px;color:var(--mute);line-height:1.3;min-width:0}
+.trust li:nth-child(odd){border-right:1px solid var(--line)} .trust li:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.trust li svg{width:22px;height:22px;color:var(--ink);flex:0 0 auto} .trust li b{display:block;color:var(--ink);font-weight:600}
+@media (min-width:900px){.trust ul{grid-template-columns:repeat(4,1fr)} .trust li{padding:var(--s2) var(--s3);border-bottom:0!important;border-right:1px solid var(--line)} .trust li:last-child{border-right:0}}
+
+/* brojke */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:var(--s2)}
+.stat .v{font-family:var(--display);font-weight:700;font-size:36px;line-height:1} .stat .v small{font-size:.5em;color:var(--mute);margin-left:4px}
+.stat .l{font-size:13px;color:var(--mute);margin-top:var(--s1)}
+@media (min-width:700px){.stats{grid-template-columns:repeat(4,1fr)}}
+
+/* zašto: lista sa linijama, bez kartica */
+.feat{display:grid;grid-template-columns:1fr;border-top:1px solid var(--line)}
+.fitem{display:grid;grid-template-columns:28px 1fr;gap:var(--s2);align-items:start;padding:var(--s3) 0;border-bottom:1px solid var(--line)}
+.fitem svg{width:28px;height:28px;color:var(--ink)}
+.fitem p{margin:var(--s1) 0 0;color:var(--mute)}
+@media (min-width:800px){.feat{grid-template-columns:1fr 1fr;column-gap:var(--s5)}}
+
+/* ramovi */
+.frames{display:grid;gap:var(--s1);margin:0;padding:0;list-style:none}
+.frames li{display:grid;grid-template-columns:1fr auto;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:var(--s2)}
+.frames b{font-family:var(--display);font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.02em} .frames span{display:block;font-size:13px;color:var(--mute)}
+.pill{display:inline-flex;align-items:center;gap:6px;height:32px;padding:0 12px;border-radius:999px;font-size:13px;font-weight:600;white-space:nowrap}
+.pill svg{width:16px;height:16px}
+.pill.yes{background:#DFF1E5;color:var(--ok)} .pill.no{background:#F6DEDC;color:var(--err)} .pill.ask{background:#FFF0C2;color:var(--honey-ink)}
+
+/* galerija */
+.gal{display:grid;grid-template-columns:1fr;gap:12px}
+.gal .main{position:relative;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--panel);aspect-ratio:4/3;max-width:100%}
+.gal .main img{width:100%;height:100%;object-fit:contain}
+.gal .cap{position:absolute;left:12px;bottom:12px;background:var(--steel);color:#fff;border-radius:999px;padding:6px 12px;font-size:13px}
+.thumbs{display:grid;grid-template-columns:repeat(6,1fr);gap:var(--s1)}
+.thumbs button{padding:0;border:2px solid var(--line);border-radius:8px;overflow:hidden;background:var(--panel);aspect-ratio:1}
+.thumbs button[aria-current="true"]{border-color:var(--ink)} .thumbs img{width:100%;height:100%;object-fit:cover}
+@media (min-width:900px){.gal{grid-template-columns:1fr 200px} .thumbs{grid-template-columns:1fr 1fr;align-content:start}}
+
+/* specifikacije */
+.specs{display:grid;grid-template-columns:1fr;margin:0;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.specs div{display:grid;grid-template-columns:1fr 1.3fr;gap:12px;padding:12px var(--s2);border-bottom:1px solid var(--line)}
+.specs div:last-child{border-bottom:0} .specs dt{color:var(--mute);margin:0} .specs dd{margin:0;font-weight:500}
+@media (min-width:900px){.specs{grid-template-columns:1fr 1fr} .specs div:nth-last-child(2){border-bottom:0} .specs div:nth-child(odd){border-right:1px solid var(--line)}}
+
+/* koraci (pravi redosled: naručiš → potvrdimo → stiže) */
+.steps{display:grid;grid-template-columns:1fr;gap:12px;counter-reset:s}
+.step{background:var(--steel);color:#fff;border-radius:var(--r);padding:var(--s3)}
+.step::before{counter-increment:s;content:counter(s);font-family:var(--display);font-weight:700;font-size:32px;line-height:1;color:var(--honey);display:block;margin-bottom:12px}
+.step p{margin:var(--s1) 0 0;color:var(--steel-text)}
+@media (min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
+
+/* pitanja + narudžbina */
+.two{display:grid;grid-template-columns:1fr;gap:var(--s4)}
+@media (min-width:900px){.two{grid-template-columns:1fr 1fr;gap:var(--s5);align-items:start} .order{position:sticky;top:20px}}
+.faq details{border-bottom:1px solid var(--line);padding:var(--s2) 0}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:12px;align-items:center;font-weight:600}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--display);font-weight:700;font-size:24px;color:var(--ink);flex:0 0 auto} .faq details[open] summary::after{content:"–"}
+.faq p{margin:12px 0 0;color:var(--mute)}
+.order{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:var(--s3)}
+.order h3{font-size:28px} .order .sub{margin:var(--s1) 0 var(--s3);color:var(--mute);font-size:13px}
+form{display:grid;gap:12px}
+label{display:grid;gap:6px;font-size:13px;color:var(--mute);font-weight:500}
+input,textarea,select{font:inherit;font-size:16px;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;width:100%;min-width:0}
+input::placeholder,textarea::placeholder{color:#7C8790} input:focus,textarea:focus,select:focus{outline:none;border-color:var(--ink)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px} @media (max-width:420px){.row2{grid-template-columns:1fr}}
+.total{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:12px 14px;background:var(--bg);border-radius:10px;font-size:13px;color:var(--mute)}
+.total{flex-wrap:wrap} .total b{font-family:var(--display);font-weight:700;font-size:24px;color:var(--ink);white-space:nowrap}
+.hp{position:absolute;left:-9999px;top:-9999px;height:0;overflow:hidden}
+.msg{padding:12px 14px;border-radius:10px;font-weight:500}
+.msg.ok{background:#DFF1E5;color:var(--ok)} .msg.err{background:#F6DEDC;color:var(--err)}
+.contact{display:flex;gap:var(--s1);flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 var(--s2);border-radius:999px;border:1.5px solid var(--line);font-size:13px;font-weight:500;background:var(--panel)}
+.chip svg{width:18px;height:18px} .chip.viber svg{color:var(--viber)} .chip.wa svg{color:var(--whatsapp)} .chip:hover{border-color:var(--ink)}
+
+footer{background:var(--steel);color:var(--steel-text);padding:var(--s4) 0 120px;font-size:13px}
+footer .wrap{display:grid;gap:var(--s2)} footer .brand{color:#fff}
+footer .links{display:flex;gap:var(--s2) var(--s3);flex-wrap:wrap} footer .links a:hover{color:#fff}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--steel);padding:var(--s1) max(16px,env(safe-area-inset-right,0px)) calc(8px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.bar .in{max-width:1120px;margin:0 auto;display:flex;align-items:center;gap:var(--s1)}
+.bar .p{display:none;flex-direction:column;line-height:1.15;margin-right:auto} .bar .p b{font-family:var(--display);font-weight:700;font-size:22px;color:var(--honey)} .bar .p span{font-size:13px;color:var(--steel-text)}
+.bar .btn-ghost{color:#fff;border-color:rgba(255,255,255,.4)} .bar .btn-ghost:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.bar .go{flex:1} @media (min-width:700px){.bar .p{display:flex} .bar .go{flex:0 0 auto;min-width:240px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <span class="brand" aria-label="Domaćin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z"/><path d="M12 8v8M8.5 10v4M15.5 10v4" stroke-linecap="round"/></svg> Domaćin</span>
+      <a class="tel num" href="tel:+381654007703" data-cta="tel" data-place="top">065/400-77-03</a>
+      <a class="btn btn-ghost btn-icon tel-icon" href="tel:+381654007703" data-cta="tel" data-place="top" aria-label="Pozovi 065/400-77-03"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6.2 6.2l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+    </div>
+    <div class="hero-head">
+      <div class="label">Mlekarstvo · pavlaka · 80 L/h</div>
+      <h1>Separator za mleko</h1>
+      <p class="lead">Sipaš toplo mleko gore, a na dve cevi izlaze pavlaka i obrano mleko. Bez ručnog okretanja.</p>
+    </div>
+    <div class="hero-visual">
+      <img src="img/hero.jpg" width="750" height="750" alt="Električni separator za mleko sa crvenim kućištem i aluminijumskom posudom" fetchpriority="high">
+    </div>
+    <div class="hero-buy">
+      <div class="price num"><span class="rsd">40 990 RSD</span><span class="eur">349 €</span></div>
+      <div class="cta" data-bar-after>
+        <a class="btn" href="#naruci" data-cta="naruci" data-place="hero">Naruči pouzećem <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="tel:+381654007703" data-cta="tel" data-place="hero"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6.2 6.2l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg> Pozovi</a>
+      </div>
+      <p class="fine">Bez avansa: platiš kuriru. Rok isporuke ti kažemo kad potvrdimo narudžbinu.</p>
+    </div>
+  </div>
+</header>
+
+<div class="trust">
+  <div class="wrap"><ul>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M6 12h.01M18 12h.01"/></svg><div><b>Pouzeće</b>platiš kad stigne</div></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h13v13H1zM14 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="17.5" cy="18.5" r="2.5"/></svg><div><b>AKS kurir</b>na tvoju adresu</div></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div><b>Kragujevac</b>lično preuzimanje</div></li>
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg><div><b>Garancija</b>2 godine</div></li>
+  </ul></div>
+</div>
+
+<section class="wrap">
+  <div class="stats num">
+    <div class="stat"><div class="v">80<small>L</small></div><div class="l">mleka na sat</div></div><div class="stat"><div class="v">12<small>diskova</small></div><div class="l">u bubnju</div></div><div class="stat"><div class="v">12<small>L</small></div><div class="l">posuda za mleko</div></div><div class="stat"><div class="v">5<small>kg</small></div><div class="l">težina</div></div>
+  </div>
+</section>
+
+<section class="wrap" id="zasto">
+  <div class="sec-head"><div class="label">Zašto električni</div><h2>Pavlaka bez okretanja ručke</h2><p>Za domaćinstva sa kravama i kozama koja prave kajmak, pavlaku i puter.</p></div>
+  <div class="feat">
+    <div class="fitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg><div><h3>Motor umesto ručke</h3><p>Brzinu biraš okretnim dugmetom, od 5.000 do 11.000 obrtaja.</p></div></div><div class="fitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 5 6.5 5 9.5a5 5 0 0 1-10 0C7 9.5 9 7 12 3z"/></svg><div><h3>Gustina pavlake se podešava</h3><p>Šrafom na izlazu biraš koliko gusta pavlaka izlazi.</p></div></div><div class="fitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><h3>80 litara na sat</h3><p>Muža od nekoliko krava se obradi za kratko vreme.</p></div></div><div class="fitem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/></svg><div><h3>Rastavlja se za pranje</h3><p>Diskovi, posuda i izlivi se skidaju i peru toplom vodom.</p></div></div>
+  </div>
+</section>
+
+<section class="wrap" id="kutija">
+  <div class="sec-head"><div class="label">Šta dobijaš</div><h2>U kutiji</h2><p>Separator dolazi sa svim delovima za pranje.</p></div>
+  <ul class="frames plain">
+    <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><div><b>Separator</b><span>kućište sa motorom</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><div><b>Posuda za mleko</b><span>12 litara</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><div><b>Bubanj sa 12 diskova</b><span>i izlivi za pavlaku i mleko</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><div><b>Ključ</b><span>za skidanje bubnja</span></div></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"/></svg><div><b>Uputstvo</b><span>na engleskom i kineskom</span></div></li>
+  </ul>
+</section>
+
+<section class="wrap" id="galerija">
+  <div class="sec-head"><div class="label">Galerija</div><h2>Izbliza</h2><p>Slike su od proizvođača. Naše fotografije stižu sa prvim primerkom.</p></div>
+  <div class="gal">
+    <div class="main"><img data-gallery-main src="img/g1.jpg" width="790" height="790" alt="Separator spreda" loading="lazy"><span class="cap" data-gallery-caption>Separator spreda</span></div>
+    <div class="thumbs">
+      <button type="button" data-gallery-thumb data-i="1" data-src="img/g1.jpg" data-alt="Separator spreda" aria-current="true"><img src="img/g1.jpg" alt="" loading="lazy"></button>
+      <button type="button" data-gallery-thumb data-i="2" data-src="img/g2.jpg" data-alt="Separator na stolu" aria-current="false"><img src="img/g2.jpg" alt="" loading="lazy"></button>
+      <button type="button" data-gallery-thumb data-i="3" data-src="img/g3.jpg" data-alt="Izlivi za pavlaku i mleko" aria-current="false"><img src="img/g3.jpg" alt="" loading="lazy"></button>
+      <button type="button" data-gallery-thumb data-i="4" data-src="img/g4.jpg" data-alt="Dugme za brzinu" aria-current="false"><img src="img/g4.jpg" alt="" loading="lazy"></button>
+      <button type="button" data-gallery-thumb data-i="5" data-src="img/g5.jpg" data-alt="Gumene nožice" aria-current="false"><img src="img/g5.jpg" alt="" loading="lazy"></button>
+      <button type="button" data-gallery-thumb data-i="6" data-src="img/g6.jpg" data-alt="Delovi koji se peru" aria-current="false"><img src="img/g6.jpg" alt="" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="specifikacije">
+  <div class="sec-head"><div class="label">Tehnički podaci</div><h2>Specifikacije</h2></div>
+  <dl class="specs num">
+    <div><dt>Kapacitet</dt><dd>80 litara mleka na sat</dd></div><div><dt>Diskova u bubnju</dt><dd>12</dd></div><div><dt>Obrtaji</dt><dd>5.000–11.000 u minuti, podešava se</dd></div><div><dt>Posuda za mleko</dt><dd>12 litara</dd></div><div><dt>Odnos pavlake i mleka</dt><dd>od 1:4 do 1:10, podešava se</dd></div><div><dt>Temperatura mleka</dt><dd>35–40 °C</dd></div><div><dt>Visina</dt><dd>oko 50 cm</dd></div><div><dt>Težina</dt><dd>oko 5 kg</dd></div><div><dt>Napon i snaga</dt><dd>potvrđujemo telefonom pre slanja</dd></div><div><dt>Garancija</dt><dd>2 godine</dd></div>
+  </dl>
+</section>
+
+<section class="wrap" id="kako">
+  <div class="sec-head"><div class="label">Kako do njega</div><h2>Tri koraka, bez avansa</h2></div>
+  <div class="steps">
+    <div class="step"><h3>Pozovi ili naruči</h3><p>Telefon, Viber, WhatsApp ili forma ispod. Odgovaramo isti dan.</p></div>
+    <div class="step"><h3>Potvrdimo telefonom</h3><p>Proverimo adresu, odgovorimo na pitanja i kažemo ti rok isporuke.</p></div>
+    <div class="step"><h3>Stiže na adresu</h3><p>AKS kurir donosi, platiš kuriru. Ili preuzmeš u Kragujevcu.</p></div>
+  </div>
+</section>
+
+<section class="wrap" id="naruci">
+  <div class="two">
+    <div class="faq" data-faq>
+      <div class="sec-head"><div class="label">Pitanja domaćina</div><h2>Ono što svi pitaju</h2></div>
+      <details><summary>Kakvo mleko ide u separator?</summary><p>Toplo, između 35 i 40 °C, odmah posle muže ili zagrejano. Hladno mleko se slabo odvaja.</p></details><details><summary>Koliko radi u komadu?</summary><p>Proizvođač savetuje do 30 minuta rada, pa pauzu da se motor ohladi. To je oko 40 litara mleka.</p></details><details><summary>Koliko se dugo pere?</summary><p>Bubanj i diskovi se rastave za par minuta i operu toplom vodom. Pere se posle svake upotrebe.</p></details><details><summary>Kako ide plaćanje i dostava?</summary><p>Pouzećem: platiš kuriru kad stigne, bez avansa. Rok isporuke ti kažemo telefonom kad potvrdimo narudžbinu. U Kragujevcu možeš i lično da preuzmeš.</p></details><details><summary>Šta ako nešto zakaže?</summary><p>Garancija je 2 godine. Javiš se telefonom i rešavamo popravkom ili zamenom.</p></details>
+    </div>
+    <div class="order">
+      <h3>Naruči pouzećem</h3>
+      <p class="sub">Bez plaćanja unapred. Zovemo te da potvrdimo, pa šaljemo.</p>
+      <form id="orderForm" novalidate>
+        <div class="row2">
+          <label>Ime i prezime<input id="f_name" name="name" required autocomplete="name"></label>
+          <label>Telefon<input id="f_phone" name="phone" required inputmode="tel" autocomplete="tel" placeholder="06x xxx xxxx"></label>
+        </div>
+        <label>Adresa za dostavu (ulica i broj, mesto)<input id="f_address" name="address" autocomplete="street-address" placeholder="ili napiši „preuzimam u Kragujevcu“"></label>
+        <div class="row2">
+          <label>Količina<select id="f_qty" name="qty"><option>1</option><option>2</option></select></label>
+          <div class="total" style="align-self:end"><span>Za platiti kuriru</span><b id="o_total" class="num">40 990 RSD</b></div>
+        </div>
+        <label>Napomena (nije obavezno)<textarea id="f_note" name="note" rows="2" placeholder="npr. zovite posle 16h"></textarea></label>
+        <div class="hp" aria-hidden="true"><label>Website<input id="f_website" name="website" tabindex="-1" autocomplete="off"></label></div>
+        <button class="btn" type="submit">Pošalji narudžbinu <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <div id="o_msg" hidden></div>
+        <div class="contact">
+          <a class="chip" href="tel:+381654007703" data-cta="tel" data-place="form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6.2 6.2l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>065/400-77-03</a>
+          <a class="chip viber" href="viber://chat?number=%2B381654007703" data-cta="viber" data-place="form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg>Viber</a>
+          <a class="chip wa" href="https://wa.me/381654007703" data-cta="whatsapp" data-place="form"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 21l1.9-5.4A8 8 0 1 1 21 12z"/></svg>WhatsApp</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.5l8.2 4.75v9.5L12 21.5l-8.2-4.75v-9.5z"/><path d="M12 8v8M8.5 10v4M15.5 10v4" stroke-linecap="round"/></svg>Domaćin</span>
+    <div class="links"><a href="tel:+381654007703" data-cta="tel" data-place="footer">065/400-77-03</a></div>
+    <div>Kragujevac · cena u RSD, € orijentaciono (117,5 RSD/€)</div>
+  </div>
+</footer>
+
+<div class="bar" data-bar>
+  <div class="in">
+    <div class="p num"><b>40 990 RSD</b><span>349 € · pouzeće</span></div>
+    <a class="btn btn-ghost btn-icon" href="tel:+381654007703" data-cta="tel" data-place="bar" aria-label="Pozovi 065/400-77-03"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6.2 6.2l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+    <a class="btn go" href="#naruci" data-cta="naruci" data-place="bar">Naruči pouzećem</a>
+  </div>
+</div>
+
+<script>window.LAB = {"cfg": {"posthog_token": "phc_nSYSa6a8967tSxUyGNnqqurq9cyHMbJHP8VtSQvo6FQh", "posthog_host": "https://eu.i.posthog.com", "supabase_url": "https://rbewmrpliukgiscbtdez.supabase.co", "supabase_key": "sb_publishable_Yt1-boMb_3MtbgdiN1h1Eg_gg0TDveh", "eur_rate": 117.5, "phone_display": "065/400-77-03", "google_ads_tag": "", "google_ads_conversion_label": ""}, "product": {"slug": "separator-mleka-80l", "name": "Električni separator za mleko 80 L/h", "price": 40990}};</script>
+<script src="../lab.js" defer></script>
+</body>
+</html>
